@@ -1,1 +1,31 @@
-<h1>Juan</h1>
+<h1>Listado de personas</h1>
+
+
+<div class="container-fluid ">
+
+<button type="button" class="btn btn-success" > <%= link_to "Crear nuevo", "people/new", class:"text-decoration-none text-white" %></button>
+<table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Birth Date</th>
+      <th scope="col">DNI</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @people.each do |person| %>
+    <tr>
+      <td><%= person.name%></td>
+      <td><%= person.surname%></td>
+      <td><%= person.birth_date%></td>
+      <td><%= person.dni%></td>
+      <td>Ver detalle</td>
+    </tr>
+    <%end%>
+  </tbody>
+       
+    </table>
+</div>
+  

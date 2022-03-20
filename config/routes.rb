@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
  root 'people#index'
 
- get '/people', to: 'home#index'
+ get '/people', to: 'people#index'
  get 'people/new', to: 'people#new'
  get 'people/:id', to: 'people#detail'
  get 'people/:id/edit', to: 'people#edit'
