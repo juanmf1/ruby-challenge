@@ -28,7 +28,7 @@
         <%= link_to detail_path(person.id),{class:"btn btn-primary mx-2"} do %>
         <i class="material-icons md-36">view_list</i>
         <%end%>
-        <%= button_to detail_path(person.id),{class:"btn btn-danger mx-2"}, method: :delete do %>
+        <%= button_to detail_path(person.id), :class => "btn btn-danger mx-2", method: :delete do %>
         <i class="material-icons md-36 border-0">delete</i>
         <%end%>
       </div>
