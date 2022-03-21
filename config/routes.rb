@@ -11,10 +11,5 @@ Rails.application.routes.draw do
  patch '/people/:id', to: 'people#update', as: :person
  post 'people', to: 'people#create'
  delete 'people/:id', to: 'people#destroy', as: "destroy"
-  
-  
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  
-  # Defines the root path route ("/")
-  # root "articles#index"
+
 end

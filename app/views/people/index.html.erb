@@ -3,10 +3,12 @@
 
 <div class="container-fluid ">
 
-<button type="button" class="btn btn-success" > <%= link_to "Crear nuevo", "people/new", class:"text-decoration-none text-white" %></button>
+<button type="button" class="btn btn-success" >
+  <%= link_to "Create new", "people/new", class:"text-decoration-none text-white" %>
+</button>
 <p class="m-3 d-inline-block "><b>Average age:</b> <%= @ages %></p>
 <table class="table">
-    <thead>
+  <thead>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Surname</th>
@@ -22,13 +24,18 @@
       <td><%= person.birth_date%></td>
       <td><%= person.dni%></td>
       <td>
-      <%= link_to "Details", detail_path(person.id), class:"btn btn-primary" %>
+      <div class="d-flex">
+        <%= link_to detail_path(person.id),{class:"btn btn-primary mx-2"} do %>
+        <i class="material-icons md-36">view_list</i>
+        <%end%>
+        <%= button_to detail_path(person.id),{class:"btn btn-danger mx-2"}, method: :delete do %>
+        <i class="material-icons md-36 border-0">delete</i>
+        <%end%>
+      </div>
       </td>
-
     </tr>
-    <%end%>
-  </tbody>
-       
-    </table>
+  <%end%>
+  </tbody>       
+</table>
 </div>
   

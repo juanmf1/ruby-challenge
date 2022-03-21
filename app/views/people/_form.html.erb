@@ -1,34 +1,36 @@
 
 <%= form_with(model: @person, local: true) do |form| %>
 
-    <div class="m-1">
+  <div class="m-1">
     <%=form.label :name , style: "width:100px"%>
     <%= form.text_field :name %>
-    </div>
+  </div>
 
-    <div class="m-1 ">
+  <div class="m-1 ">
     <%=form.label :surname , style: "width:100px"%>
     <%= form.text_field :surname %>
     
-    </div>
+  </div>
 
-    <div class="m-1 ">
+  <div class="m-1 ">
     <%=form.label :birth_date , style: "width:100px"%>
-    <%= form.date_field :birth_date %>
-    
-    </div>
+    <%= form.date_field :birth_date %>  
+  </div>
 
-    <div class="m-1 ">
+  <div class="m-1 ">
     <%=form.label :dni , style: "width:100px"%>
-    <%= form.text_field :dni %>
-    
-    </div>
+    <%= form.text_field :dni %>  
+  </div>
 
-    <div>
+  <div>
     <%=form.submit "Send", :class => 'btn btn-success m-1'  %>
-    </div>
+  </div>
 
 <%end%>
 
-<%= link_to "Go back to Home", root_path, class:"btn btn-primary m-1" %>
+<%= link_to root_path, {class:"btn btn-primary m-1"} do %>
+  <i class="material-icons md-24">home</i>
+  <span> Go back to home </span>
+<%end%>
+
 
