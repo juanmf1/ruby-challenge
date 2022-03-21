@@ -1,6 +1,9 @@
 <div class="card m-3" style="width: 18rem;">
+
   <div class="card-body">
+
     <h5 class="card-title mb-4"><%=@person.name%> <%=@person.surname%></h5>
+
     <p><b>Birthday</b> : <%=@person.birth_date%> </p>
     <p><b>DNI: </b> <%=@person.dni%> </p>
     <p><b>Age: </b> <%= @age %> </p>
@@ -10,12 +13,14 @@
       <%= link_to edit_path(@person.id), {class:"btn btn-warning mx-2"} do %>
         <i class="material-icons md-light md-24  ">edit</i>
       <%end%>
+
       <%= button_to detail_path(@person.id), :class => "btn btn-danger mx-2", method: :delete do %>
         <i class="material-icons md-24 border-0">delete</i>
       <%end%>
     </div>
 
   </div>
+
 </div>
 
 <%= link_to root_path, {class:"btn btn-primary m-3"} do %>

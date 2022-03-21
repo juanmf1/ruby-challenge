@@ -3,39 +3,42 @@
 
 <div class="container-fluid ">
 
-<button type="button" class="btn btn-success" >
-  <%= link_to "Create new", "people/new", class:"text-decoration-none text-white" %>
-</button>
-<p class="m-3 d-inline-block "><b>Average age:</b> <%= @ages %></p>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Surname</th>
-      <th scope="col">Birth Date</th>
-      <th scope="col">DNI</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @people.each do |person| %>
-    <tr>
-      <td><%= person.name%></td>
-      <td><%= person.surname%></td>
-      <td><%= person.birth_date%></td>
-      <td><%= person.dni%></td>
-      <td>
-      <div class="d-flex">
-        <%= link_to detail_path(person.id),{class:"btn btn-primary mx-2"} do %>
-        <i class="material-icons md-36">view_list</i>
-        <%end%>
-        <%= button_to detail_path(person.id), :class => "btn btn-danger mx-2", method: :delete do %>
-        <i class="material-icons md-36 border-0">delete</i>
-        <%end%>
-      </div>
-      </td>
-    </tr>
-  <%end%>
-  </tbody>       
-</table>
+  <button type="button" class="btn btn-success" >
+    <%= link_to "Create new", "people/new", class:"text-decoration-none text-white" %>
+  </button>
+
+  <p class="m-3 d-inline-block "><b>Average age:</b> <%= @ages %></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">DNI</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name%></td>
+        <td><%= person.surname%></td>
+        <td><%= person.birth_date%></td>
+        <td><%= person.dni%></td>
+        <td>
+        <div class="d-flex">
+          <%= link_to detail_path(person.id),{class:"btn btn-primary mx-2"} do %>
+          <i class="material-icons md-36">view_list</i>
+          <%end%>
+          <%= button_to detail_path(person.id), :class => "btn btn-danger mx-2", method: :delete do %>
+          <i class="material-icons md-36 border-0">delete</i>
+          <%end%>
+        </div>
+        </td>
+      </tr>
+    <%end%>
+    </tbody>       
+  </table>
+
 </div>
   

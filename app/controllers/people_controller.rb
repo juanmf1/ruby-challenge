@@ -11,8 +11,14 @@ class PeopleController < ApplicationController
   def averageAge(array)
     ages = 0
     array.each {|person| ages += calculateAge(person.birth_date) }
-    averageAge = ages / array.length
-    return averageAge
+
+    if array.length == 0
+      return ages
+    else 
+      averageAge = ages / array.length
+      return averageAge
+    end
+
   end
 
 
