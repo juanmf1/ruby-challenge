@@ -2,8 +2,10 @@
 <div class="card m-3" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title mb-4"><%=@person.name%> <%=@person.surname%></h5>
-    <p><b>Fecha de Nacimiento</b> : <%=@person.birth_date%> </p>
+    <p><b>Birthday</b> : <%=@person.birth_date%> </p>
     <p><b>DNI: </b> <%=@person.dni%> </p>
+    <p><b>Age: </b> <%= @age %> </p>
+    
     <%= link_to "Go back to Home", root_path, class:"btn btn-primary" %>
     <%= link_to "Edit", edit_path(@person.id), class:"btn btn-warning" %>
 
