@@ -4,7 +4,7 @@
 <div class="container-fluid ">
 
 <button type="button" class="btn btn-success" > <%= link_to "Crear nuevo", "people/new", class:"text-decoration-none text-white" %></button>
-<p class="m-3 btn "><b>Average age:</b> <%= @ages %></p>
+<p class="m-3 d-inline-block "><b>Average age:</b> <%= @ages %></p>
 <table class="table">
     <thead>
     <tr>
@@ -22,7 +22,7 @@
       <td><%= person.birth_date%></td>
       <td><%= person.dni%></td>
       <td>
-      <%= link_to "Ver detalle", detail_path(person.id), class:"btn btn-info" %>
+      <%= link_to "Details", detail_path(person.id), class:"btn btn-primary" %>
       </td>
 
     </tr>
