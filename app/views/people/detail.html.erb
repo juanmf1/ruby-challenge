@@ -5,6 +5,7 @@
     <p><b>Fecha de Nacimiento</b> : <%=@person.birth_date%> </p>
     <p><b>DNI: </b> <%=@person.dni%> </p>
     <%= link_to "Go back to Home", root_path, class:"btn btn-primary" %>
+    <%= link_to "Edit", edit_path(@person.id), class:"btn btn-warning" %>
 
   </div>
 </div>

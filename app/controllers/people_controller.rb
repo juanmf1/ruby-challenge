@@ -1,9 +1,9 @@
 class PeopleController < ApplicationController
 
-  before_action :find_person, only: [:detail, :edit, :update]
+  before_action :find_person, only: [:detail, :edit, :update, :destroy]
 
   def index
-    @people = Person.all
+    @people = Person.all.sort_by{|e| e.birth_date.month}
   end
 
   def new 
@@ -26,8 +26,14 @@ class PeopleController < ApplicationController
     redirect_to @person
   end
 
+  def destroy
+    @person.destroy
+    redirect_to root_path
+  end
+
   def find_person
     @person = Person.find(params[:id])
   end
+
 
 end
